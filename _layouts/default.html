@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <button onclick="toggleTheme()" style="position: fixed; top: 20px; right: 20px; padding: 10px; border-radius: 50%;">🌓</button>
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        {% if site.description %}
+        <p>{{ site.description }}</p>
+        {% endif %}
+      </header>
+      <section>
+        {{ content }}
+      </section>
+    </div>
+    <script>
+      const toggleTheme = () => {
+        document.body.dataset.theme = 
+          document.body.dataset.theme === 'light' ? 'dark' : 'light';
+        localStorage.setItem('theme', document.body.dataset.theme);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.dataset.theme = savedTheme;
+      });
+    </script>
+  </body>
+</html>
