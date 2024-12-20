@@ -4,28 +4,34 @@
 @import "{{ site.theme }}";
 
 [data-theme="dark"] {
-  body {
-    background-color: #1a1a1a;
-    color: #f8f8f8;
+  body, .wrapper {
+    background-color: #1a1a1a !important;
+    color: #f8f8f8 !important;
+  }
+  header, section {
+    background-color: #262626 !important;
   }
   a {
-    color: #63B3ED;
+    color: #63B3ED !important;
   }
   a:visited {
-    color: #9F7AEA;
+    color: #9F7AEA !important;
   }
 }
 
 [data-theme="light"] {
-  body {
-    background-color: #ffffff;
-    color: #333333;
+  body, .wrapper {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+  }
+  header, section {
+    background-color: #f8f8f8 !important;
   }
   a {
-    color: #2B6CB0;
+    color: #2B6CB0 !important;
   }
   a:visited {
-    color: #6B46C1;
+    color: #6B46C1 !important;
   }
 }
 
