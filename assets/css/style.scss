@@ -1,15 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+---
+---
+
+@import "{{ site.theme }}";
 
 [data-theme="dark"] {
-  --bgcolor: #1a1a1a;
-  --fontcolor: #f8f8f8;
-  --linkcolor: #63B3ED;
-  --visitedcolor: #9F7AEA;
+  body {
+    background-color: #1a1a1a;
+    color: #f8f8f8;
+  }
+  a {
+    color: #63B3ED;
+  }
+  a:visited {
+    color: #9F7AEA;
+  }
 }
 
 [data-theme="light"] {
-  --bgcolor: #ffffff;
-  --fontcolor: #333333;
-  --linkcolor: #2B6CB0;
-  --visitedcolor: #6B46C1;
+  body {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  a {
+    color: #2B6CB0;
+  }
+  a:visited {
+    color: #6B46C1;
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
 }

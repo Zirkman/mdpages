@@ -1,4 +1,4 @@
-remote_theme: abhinavs/moonwalk
+theme: jekyll-theme-minimal
 title: Code Portfolio
 description: A collection of coding projects and documentation
 show_downloads: true
